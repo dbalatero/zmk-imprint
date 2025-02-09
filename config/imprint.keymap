@@ -12,13 +12,6 @@
 / {
     chosen { zmk,matrix-transform = &imprint_function_row_full_bottom_row; };
 
-    behaviors {
-        FN_KEY: mo {
-            compatible = "zmk,behavior-momentary-layer";
-            layer = <RAISE_LAYER>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -31,8 +24,8 @@
 &kp LSHFT  &kp Z   &kp X      &kp C     &kp V     &kp B               &kp N      &kp M     &kp COMMA  &kp DOT   &kp FSLH        &kp RSHFT
 &trans     &trans  &kp GRAVE  &kp LEFT  &kp RIGHT                                &kp UP    &kp DOWN   &kp LBKT  &kp RBKT        &trans
 
-                                &kp LALT   &FN_KEY   &kp HOME      &kp END   &FN_KEY   &kp SUPER
-                                &kp LCTRL  &kp LGUI  &trans        &kp F12   &kp BSPC  &kp SPACE
+                        &kp LALT   &mo RAISE_LAYER   &kp HOME      &kp END   &mo RAISE_LAYER   &kp SUPER
+                        &kp LCTRL  &kp LGUI          &trans        &kp F12   &kp BSPC          &kp SPACE
             >;
         };
 
